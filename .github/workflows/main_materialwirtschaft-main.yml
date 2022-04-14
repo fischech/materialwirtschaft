@@ -51,6 +51,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'Materialwirtschaft-main'
+          app-name: 'main_materialwirtschaft-main'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D9777AD3653848309D9BA9532F04E07F }}
           package: .

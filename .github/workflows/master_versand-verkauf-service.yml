@@ -6,7 +6,7 @@ name: Build and deploy Node.js app to Azure Web App - Versand-Verkauf-Service
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 jobs:
@@ -14,7 +14,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
 
       - name: Set up Node.js version
         uses: actions/setup-node@v1
@@ -51,6 +51,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'Versand-Verkauf-Service'
+          app-name: 'Materialwirtschaft-main'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5A54BE37C83E47408682DC5C36C0A853 }}
           package: .
